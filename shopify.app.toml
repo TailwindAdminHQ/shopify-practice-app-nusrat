@@ -3,22 +3,23 @@
 client_id = "ebf557270c91e5d7c66e8b7fd5bf5738"
 name = "practice-app"
 handle = "practice-app-114"
-application_url = "https://compounds-receipt-legs-finances.trycloudflare.com"
+application_url = "https://salad-personalized-listprice-deck.trycloudflare.com"
 embedded = true
 
 [build]
 automatically_update_urls_on_dev = true
 dev_store_url = "nogor-test-store.myshopify.com"
+include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "write_products,read_product_listings"
 
 [auth]
 redirect_urls = [
-  "https://compounds-receipt-legs-finances.trycloudflare.com/auth/callback",
-  "https://compounds-receipt-legs-finances.trycloudflare.com/auth/shopify/callback",
-  "https://compounds-receipt-legs-finances.trycloudflare.com/api/auth/callback"
+  "https://salad-personalized-listprice-deck.trycloudflare.com/auth/callback",
+  "https://salad-personalized-listprice-deck.trycloudflare.com/auth/shopify/callback",
+  "https://salad-personalized-listprice-deck.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

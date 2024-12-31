@@ -1,3 +1,4 @@
+
 type CreateCustomerInput = {
     email: string;
     name: string;

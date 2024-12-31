@@ -3,7 +3,7 @@
 client_id = "ebf557270c91e5d7c66e8b7fd5bf5738"
 name = "practice-app"
 handle = "practice-app-114"
-application_url = "https://hong-helen-arrival-wiki.trycloudflare.com"
+application_url = "https://successful-presentation-cars-valley.trycloudflare.com"
 embedded = true
 
 [build]
@@ -13,13 +13,13 @@ include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products,read_product_listings,read_inventory,write_inventory"
+scopes = "write_products,read_product_listings,read_inventory,write_inventory,read_locations"
 
 [auth]
 redirect_urls = [
-  "https://hong-helen-arrival-wiki.trycloudflare.com/auth/callback",
-  "https://hong-helen-arrival-wiki.trycloudflare.com/auth/shopify/callback",
-  "https://hong-helen-arrival-wiki.trycloudflare.com/api/auth/callback"
+  "https://successful-presentation-cars-valley.trycloudflare.com/auth/callback",
+  "https://successful-presentation-cars-valley.trycloudflare.com/auth/shopify/callback",
+  "https://successful-presentation-cars-valley.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

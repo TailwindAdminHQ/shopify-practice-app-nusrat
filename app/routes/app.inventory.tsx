@@ -1,20 +1,35 @@
 import { useLoaderData } from '@remix-run/react';
-import { Card, Layout, Page } from '@shopify/polaris';
+import { Layout, Page } from '@shopify/polaris';
 import { authenticate } from 'app/shopify.server';
 import React from 'react'
+//47090763366577   47095287382193
+// gid://shopify/InventoryLevel/108840026289?inventory_item_id=47090763366577
+type LoaderData = {
+  available: {
+      name: string;
+      quantity: number;
+  };
+};
+
 export async function loader({ request }: { request: Request }) {
     const { admin } = await authenticate.admin(request);
 
     const response = await admin.graphql(
       `#graphql
-      query inventoryItems {
-        inventoryItems(first: 2) {
-          edges {
-            node {
-              id
-              tracked
-              sku
-            }
+      query {
+        inventoryLevel(id: "gid://shopify/InventoryLevel/108840026289?inventory_item_id=47090763366577") {
+          id
+          quantities(names: ["available", "incoming", "committed", "damaged", "on_hand", "quality_control", "reserved", "safety_stock"]) {
+            name
+            quantity
+          }
+          item {
+            id
+            sku
+          }
+          location {
+            id
+            name
           }
         }
       }`,
@@ -22,26 +37,22 @@ export async function loader({ request }: { request: Request }) {
     
     const data = await response.json();
 
-    console.log('=====================================================================================================================================================================', data.data.inventoryItems.edges)
+    const available = data?.data?.inventoryLevel?.quantities?.find(
+      (quantity: { name: string; quantity: number }) => quantity.name === "available"
+    );
     
-    return data;
+    console.log('Available Object:', available.quantity);
+    return {data, available};
 }
 
  const Inventory = () => {
-    const inventoryData = useLoaderData(); // Accessing the loader data
+    const {available} = useLoaderData<LoaderData>(); // Accessing the loader data
 
     return (
             <Page fullWidth>
               <Layout>
                 <Layout.Section>
-                  {inventoryData?.data?.inventoryItems?.edges?.map((product) => {
-                    return (
-                      <Card key={product?.node?.id}>
-                        <p>{product?.node?.id}</p>
-                      </Card>
-                    )
-                  })}
-        
+                  <h2>{available.quantity}</h2>
                 </Layout.Section>
               </Layout>
             </Page>

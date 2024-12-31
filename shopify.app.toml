@@ -3,7 +3,7 @@
 client_id = "ebf557270c91e5d7c66e8b7fd5bf5738"
 name = "practice-app"
 handle = "practice-app-114"
-application_url = "https://successful-presentation-cars-valley.trycloudflare.com"
+application_url = "https://halifax-investors-johnson-tumor.trycloudflare.com"
 embedded = true
 
 [build]
@@ -13,13 +13,13 @@ include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products,read_product_listings,read_inventory,write_inventory,read_locations"
+scopes = "write_products,read_product_listings,read_inventory,write_inventory,read_locations,write_discounts"
 
 [auth]
 redirect_urls = [
-  "https://successful-presentation-cars-valley.trycloudflare.com/auth/callback",
-  "https://successful-presentation-cars-valley.trycloudflare.com/auth/shopify/callback",
-  "https://successful-presentation-cars-valley.trycloudflare.com/api/auth/callback"
+  "https://halifax-investors-johnson-tumor.trycloudflare.com/auth/callback",
+  "https://halifax-investors-johnson-tumor.trycloudflare.com/auth/shopify/callback",
+  "https://halifax-investors-johnson-tumor.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

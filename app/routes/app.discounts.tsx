@@ -1,6 +1,6 @@
-import { json, replace, type ActionFunctionArgs } from '@remix-run/node';
+import { json, type ActionFunctionArgs } from '@remix-run/node';
 import { Form, useActionData, useSubmit } from '@remix-run/react';
-import { Button, Checkbox, FormLayout, TextField } from '@shopify/polaris';
+import { Button, FormLayout, TextField } from '@shopify/polaris';
 import { authenticate } from 'app/shopify.server';
 import { useState } from 'react';
 

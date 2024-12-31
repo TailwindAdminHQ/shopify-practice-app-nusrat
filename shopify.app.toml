@@ -3,7 +3,7 @@
 client_id = "ebf557270c91e5d7c66e8b7fd5bf5738"
 name = "practice-app"
 handle = "practice-app-114"
-application_url = "https://halifax-investors-johnson-tumor.trycloudflare.com"
+application_url = "https://jaguar-ar-prediction-defining.trycloudflare.com"
 embedded = true
 
 [build]
@@ -13,13 +13,13 @@ include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products,read_product_listings,read_inventory,write_inventory,read_locations,write_discounts"
+scopes = "write_products,read_product_listings,read_inventory,write_inventory,read_locations,write_discounts,write_customers"
 
 [auth]
 redirect_urls = [
-  "https://halifax-investors-johnson-tumor.trycloudflare.com/auth/callback",
-  "https://halifax-investors-johnson-tumor.trycloudflare.com/auth/shopify/callback",
-  "https://halifax-investors-johnson-tumor.trycloudflare.com/api/auth/callback"
+  "https://jaguar-ar-prediction-defining.trycloudflare.com/auth/callback",
+  "https://jaguar-ar-prediction-defining.trycloudflare.com/auth/shopify/callback",
+  "https://jaguar-ar-prediction-defining.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

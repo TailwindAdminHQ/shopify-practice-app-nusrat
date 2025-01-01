@@ -3,7 +3,7 @@
 client_id = "ebf557270c91e5d7c66e8b7fd5bf5738"
 name = "practice-app"
 handle = "practice-app-114"
-application_url = "https://closes-jelsoft-infectious-show.trycloudflare.com"
+application_url = "https://simple-rescue-duncan-explorer.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products,read_product_listings,read_inventory,write_inventory,re
 
 [auth]
 redirect_urls = [
-  "https://closes-jelsoft-infectious-show.trycloudflare.com/auth/callback",
-  "https://closes-jelsoft-infectious-show.trycloudflare.com/auth/shopify/callback",
-  "https://closes-jelsoft-infectious-show.trycloudflare.com/api/auth/callback"
+  "https://simple-rescue-duncan-explorer.trycloudflare.com/auth/callback",
+  "https://simple-rescue-duncan-explorer.trycloudflare.com/auth/shopify/callback",
+  "https://simple-rescue-duncan-explorer.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

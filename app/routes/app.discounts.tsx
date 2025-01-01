@@ -1,6 +1,6 @@
 import { json, type ActionFunctionArgs } from '@remix-run/node';
 import { Form, useActionData, useSubmit } from '@remix-run/react';
-import { Button, FormLayout, TextField } from '@shopify/polaris';
+import { Button, FormLayout, Page, TextField } from '@shopify/polaris';
 import { authenticate } from 'app/shopify.server';
 import { useState } from 'react';
 
@@ -90,7 +90,8 @@ const Discounts = () => {
   const handleSubmit = () => submit({}, {replace:true, method:"POST"})
   console.log(actionData)
   return (
-    <Form onSubmit={handleSubmit} method='post'>
+    <Page>
+      <Form onSubmit={handleSubmit} method='post'>
       <FormLayout>
         <TextField
           value={discountTitle}
@@ -112,6 +113,7 @@ const Discounts = () => {
         <Button submit>Create discount</Button>
       </FormLayout>
     </Form>
+    </Page>
   )
 }
 
